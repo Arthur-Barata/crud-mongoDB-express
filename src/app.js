@@ -5,11 +5,11 @@ import rotas from "./controllers/index.js";
 db.on("error", console.log.bind(console, "erro de conexao"));
 
 try {
-  db.once("open", () => {
-    console.log("conexão estabelecida com sucesso!");
-  });
+	db.once("open", () => {
+		console.log("conexão estabelecida com sucesso!");
+	});
 } catch (error) {
-  console.log(error);
+	console.log(error);
 }
 
 const app = express();
@@ -28,7 +28,7 @@ rotas(app);
 // ];
 
 app.get("/", (req, res) => {
-  res.status(200).send("voce esta na home do express");
+	res.status(200).send("voce esta na home do express");
 });
 
 export default app;

@@ -1,8 +1,6 @@
 import mongoose from "mongoose";
 
-mongoose.connect(
-  "mongodb+srv://admin:5o7EqEpL2lV5KFz0@node-mongodb.gzqyfkl.mongodb.net/mongoDB-express"
-);
+mongoose.connect(process.env.CONEXAO_DB);
 
 const db = mongoose.connection;
 export default db;
